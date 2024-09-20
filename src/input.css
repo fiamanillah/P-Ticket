@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .btn-normal {
+        @apply bg-[#f7f8f8] p-5 rounded-xl font-medium hover:text-white hover:bg-black duration-300 active:scale-[0.9];
+    }
+    .btn-active {
+        @apply bg-primary text-white p-5 rounded-xl font-medium  duration-300;
+    }
+}
