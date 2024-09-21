@@ -15,6 +15,16 @@ const submitBtn = document.getElementById("submitBtn");
 const phoneNumber = document.getElementById("phoneNumber");
 const modal = document.getElementById("modal");
 const Continue = document.getElementById("Continue");
+const menuBtn = document.getElementById("menuBtn");
+
+
+
+menuBtn.addEventListener("click", ()=>{
+    document.getElementById("line").classList.toggle("hidden");
+    document.getElementById("cross").classList.toggle("hidden");
+    document.getElementById("navItem").classList.toggle("menu-active");
+})
+
 
 console.log(seats);
 

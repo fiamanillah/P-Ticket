@@ -15,28 +15,33 @@
 
     <header class="w-full p-5">
         
-        <div class="max-w-screen-xl mx-auto flex justify-between items-center ">
-            <h1 class="text-3xl font-bold">P-Ticket</h1>
-            <nav class="flex gap-10 text-dullText font-bold ">
-                <a class="text-primary duration-500" href="">Home</a>
-                <a class="hover:text-primary duration-300" href="">About</a>
-                <a class="hover:text-primary duration-300" href="">Destination</a>
-                <a class="hover:text-primary duration-300" href="">Search</a>
-            </nav>
-            <button class="py-3 px-5 border border-primary rounded-xl flex justify-center items-center gap-2 active:scale-[0.9] duration-300 bg-primary10 text-primary font-medium">Bus <img src="./images/bus-icon.svg" alt=""></button>
+        <div class="max-w-screen-xl mx-auto flex justify-between items-center relative">
+            <div class="flex justify-between items-center w-full md-p:w-11/12">
+                <h1 class="text-3xl font-bold">P-Ticket</h1>
+                <nav class="flex gap-10 text-dullText font-bold md-p:flex-col md-p:absolute menu-hide md-p:gap-5 md-p:pb-5 md-p:w-full md-p:justify-center md-p:items-center md-p:z-10 md-p:bg-white" id="navItem">
+                    <a class="text-primary duration-500" href="">Home</a>
+                    <a class="hover:text-primary duration-300" href="">About</a>
+                    <a class="hover:text-primary duration-300" href="">Destination</a>
+                    <a class="hover:text-primary duration-300" href="">Search</a>
+                </nav>
+                <button class="py-3 px-5 border border-primary rounded-xl flex justify-center items-center gap-2 active:scale-[0.9] duration-300 bg-primary10 text-primary font-medium">Bus <img src="./images/bus-icon.svg" alt=""></button>
+            </div>
+            
+
+            <button class=" p-2 bg-primary rounded-xl mx-2 w-1/12 h-12 hidden md-p:block"  id="menuBtn"><img class="w-full h-full" id="line" src="./images/menu.svg" alt="" srcset=""> <img class="h-full w-full hidden" id="cross" src="./images/cross.svg" alt="" srcset=""></button>
         </div>
 
     </header>
 
     <section class="w-full p-5">
-        <div class="max-w-screen-xl mx-auto flex flex-col justify-center items-center bg-cover rounded-3xl bg-[url(./images/banner.png)] min-h-[600px] py-20 relative">
+        <div class="max-w-screen-xl mx-auto flex flex-col justify-center items-center bg-cover rounded-3xl bg-[url(./images/banner.png)] min-h-[600px] py-20 relative md-p:mb-[45%]">
 
-            <h1 class="text-7xl font-bold text-center text-white">End-to-End Travel with <br> <span class="text-primary">P Paribahan</span> </h1>
+            <h1 class="text-7xl md-p:text-5xl font-bold text-center text-white">End-to-End Travel with <br> <span class="text-primary">P Paribahan</span> </h1>
             <p class="text-white p-4 text-center">Yes, you can run unit tests and view the results directly within the app. <br> The integrated testing features allow for a streamlined .</p>
             <a href="#ticketSection"><button class="py-4 px-6 border-2 border-primary hover:bg-primary10 hover:text-primary bg-primary font-bold rounded-xl text-xl active:scale-[0.95] duration-300">Buy Ticket</button></a>
             
 
-            <div class="flex justify-center gap-5 absolute bottom-[-10%] w-full ">
+            <div class="flex justify-center items-center gap-5 absolute bottom-[-10%] w-full md-p:flex-col md-p:bottom-[-50%]  ">
                 <div class="flex gap-3 rounded-3xl bg-white py-5 px-7 shadow-primary">
                     <img src="./images/people.svg" alt="">
                     <div>
@@ -72,7 +77,7 @@
             <h1 class="text-4xl font-bold mb-10">Best offers for you</h1>
 
 
-            <div class="w-full flex justify-center gap-10">
+            <div class="w-full flex justify-center gap-10 lg-t:flex-col">
                 <div class="bg-[#FFBF0F] relative p-10 flex justify-between items-center rounded-3xl basis-1/2">
                     <div class="flex flex-col gap-2">
                         <h2 class="text-4xl font-bold">15% OFF</h2>
@@ -82,7 +87,7 @@
 
 
                     <div class="flex flex-col items-center justify-between h-full overflow-hidden mx-10">
-                        <span class="bg-white inline-block w-10 h-10 rounded-full absolute -top-5 z-20"></span>
+                        <span class="bg-white inline-block w-10 h-10 rounded-full absolute -top-5 z-10"></span>
                         <span class="border-dashed inline-block border-r-2 h-full absolute top-0"></span>
                         <span class="bg-white inline-block w-10 h-10 rounded-full absolute -bottom-5 z-10"></span>
                     </div>
@@ -104,7 +109,7 @@
 
 
                     <div class="flex flex-col items-center justify-between h-full overflow-hidden mx-10">
-                        <span class="bg-white inline-block w-10 h-10 rounded-full absolute -top-5 z-20"></span>
+                        <span class="bg-white inline-block w-10 h-10 rounded-full absolute -top-5 z-10"></span>
                         <span class="border-dashed inline-block border-r-2 h-full absolute top-0"></span>
                         <span class="bg-white inline-block w-10 h-10 rounded-full absolute -bottom-5 z-10"></span>
                     </div>
@@ -133,7 +138,7 @@
                 </p>
             </div>
 
-            <div class="w-full flex justify-evenly items-center mt-10 bg-white p-10 relative rounded-3xl">
+            <div class="w-full flex justify-evenly items-center mt-10 bg-white p-10 relative rounded-3xl md-p:flex-col md-p:gap-5">
                 <div class="basis-9/12">
                     <div class="w-full flex justify-between">
                         <div class="flex gap-2">
@@ -172,8 +177,8 @@
 
 
                 <div class="flex flex-col items-center justify-between h-full overflow-hidden basis-1/12">
-                    <span class="bg-[#f7f8f8] inline-block w-20 h-20 rounded-full absolute -top-10 z-20"></span>
-                    <span class="border-primary border-dashed inline-block border-r-2 h-full absolute top-0"></span>
+                    <span class="bg-[#f7f8f8] inline-block w-20 h-20 rounded-full absolute -top-10 z-10"></span>
+                    <span class="border-primary border-dashed inline-block border-r-2 h-full absolute top-0 md-p:hidden"></span>
                     <span class="bg-[#f7f8f8] inline-block w-20 h-20 rounded-full absolute -bottom-10 z-10"></span>
                 </div>
 
@@ -185,7 +190,7 @@
                 </div>
             </div>
 
-            <div class="flex justify-between w-full my-10 bg-white rounded-3xl p-10">
+            <div class="flex justify-between w-full my-10 bg-white rounded-3xl p-10 md-p:p-4 lg-t:flex-col lg-t:gap-10">
                 <div class="basis-7/12 flex flex-col ">
                     <h1 class="text-3xl font-medium">Select Your Seat</h1>
                     <div class="w-full border-t-2 border-dashed my-3"></div>
@@ -202,7 +207,7 @@
 
                     <div>
 
-                        <div class="grid grid-cols-custom-layout gap-3" id="seats">
+                        <div class="grid grid-cols-custom-layout md-p:grid-cols-custom-layout-p gap-3" id="seats">
                             <span class="flex justify-center items-center">A</span>
                             <button class="btn-normal">A1</button>
                             <button class="btn-normal">A2</button>
@@ -398,7 +403,7 @@
     </footer>
 
 
-    <div class="bg-primary10 fixed inset-0 hidden justify-center items-center" id="modal">
+    <div class="bg-primary10 fixed inset-0 hidden justify-center items-center z-50" id="modal">
         <div class="bg-white p-10 text-center flex flex-col gap-5 justify-center items-center rounded-2xl">
             <img src="./images/done.svg" alt="">
             <h1 class="text-xl font-bold text-primary">SUCCESS</h1>

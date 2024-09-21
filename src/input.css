@@ -4,9 +4,15 @@
 
 @layer components {
     .btn-normal {
-        @apply bg-[#f7f8f8] p-5 rounded-xl font-medium hover:text-white hover:bg-black duration-300 active:scale-[0.9];
+        @apply bg-[#f7f8f8] p-5 rounded-xl font-medium lg:hover:text-white lg:hover:bg-black  duration-300 active:scale-[0.9] ;
     }
     .btn-active {
-        @apply bg-primary text-white p-5 rounded-xl font-medium  duration-300;
+        @apply bg-primary text-white;
+    }
+    .menu-hide {
+        @apply md-p:top-[-500%];
+    }
+    .menu-active {
+        @apply md-p:top-20;
     }
 }
