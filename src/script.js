@@ -1,11 +1,11 @@
-// const seats = document.querySelectorAll("#seats button");
+const seats = document.querySelectorAll("#seats button");
 
-// console.log(seats);
+console.log(seats);
 
-// seats.forEach(seat => {
-//     seat.addEventListener("click", (e)=>{
-//         e.target.classList.add("btn-active")
-//         console.log(e.target);
+seats.forEach(seat => {
+    seat.addEventListener("click", (e)=>{
+        e.target.classList.toggle("btn-active")
+        console.log(e.target);
         
-//     })
-// })
+    })
+})

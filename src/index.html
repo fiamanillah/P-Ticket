@@ -6,6 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./images/bus-icon.svg" type="image/x-icon">
     <link href="./output.css" rel="stylesheet">
     <title>P-Ticket</title>
 </head>
@@ -121,7 +122,6 @@
 
     </section>
 
-
     <section class="w-full py-5 rounded-t-[100px] border-t-4 border-primary bg-[#f7f8f8]">
         <div class="max-w-screen-xl mx-auto pt-10 flex flex-col justify-center items-center ">
 
@@ -200,15 +200,11 @@
 
 
                     <div>
-                        <!-- <div class="flex flex-col justify-evenly">
-                            <span>A</span>
-                            <span>B</span>
-                        </div> -->
 
                         <div class="grid grid-cols-custom-layout gap-3" id="seats">
                             <span class="flex justify-center items-center">A</span>
                             <button class="btn-normal">A1</button>
-                            <button class="btn-active">A2</button>
+                            <button class="btn-normal">A2</button>
                             <div></div>
                             <button class="btn-normal">A3</button>
                             <button class="btn-normal">A4</button>
@@ -299,11 +295,100 @@
                 <div class="basis-5/12">
                     <h1 class="text-3xl font-medium">Select Your Seat</h1>
                     <div class="w-full border-t-2 border-dashed my-3"></div>
+
+                    <div class="p-5 bg-[#f7f8f8] rounded-3xl">
+                        <div class="flex justify-between ">
+                            <div class="font-medium flex items-start justify-center">Seat <span class="bg-primary inline-block text-sm px-2 rounded-lg ml-2 text-white ">2</span></div>
+                            <div class="font-medium">Class</div>
+                            <div class="font-medium">Price</div>
+                        </div>
+                        <div class="w-full border-t-2 border-dashed my-3"></div>
+
+                        <div class="">
+                            <div class="flex justify-between text-dullText text-center">
+                                <span>C2</span>
+                                <span>Economy</span>
+                                <span>550</span>
+                            </div>
+                        </div>
+                        <hr class="h-2 w-full my-4">
+                        <div class="flex justify-between ">
+                            <div class="font-medium">Total Price</div>
+                            <div class="font-medium">BDT <span>1100</span></div>
+                        </div>
+
+                        <div class="my-3">
+                            <div class="bg-white flex p-2 rounded-2xl mt-5" >
+                                <input class="outline-none  font-medium grow mr-2 disabled:cursor-not-allowed bg-transparent" type="text" name="" id="" disabled placeholder="Have Any Coupon?">
+                                <button class="bg-primary text-white font-bold py-2 px-5 rounded-xl  disabled:opacity-40 disabled:cursor-not-allowed" disabled>Apply</button>
+                            </div>
+                        </div>
+
+                        <div class="flex justify-between mt-2">
+                            <div class="font-medium">Grand Total</div>
+                            <div class="font-medium">BDT <span>1100</span></div>
+                        </div>
+                        
+                    </div>
+
+                    <div class="my-8">
+                        <form class="flex flex-col" action="" method="post">
+                            <label class="font-medium my-3" for="">Passenger Name*</label>
+                            <input class="p-3 border rounded-xl outline-none" type="text" required placeholder="Enter your name">
+
+                            <label class="font-medium my-3" for="">Phone Number*</label>
+                            <input class="p-3 border rounded-xl outline-none" type="number" required placeholder="Enter your phone number">
+
+                            <label class="font-medium my-3" for="">Email ID</label>
+                            <input class="p-3 border rounded-xl outline-none" type="email" placeholder="Enter your email id">
+
+                            <input class="p-3 bg-primary font-bold text-white my-4 hover:bg-primary10 hover:text-black border-primary cursor-pointer active:scale-[0.95] duration-300 border rounded-xl outline-none" type="submit" value="Next">
+                        </form>
+
+                        <div class="flex justify-around mt-2">
+                            <a class="underline text-dullText" href="">Terms and Conditions</a>
+                            <a class="underline text-dullText" href="">Cancellation Policy</a>
+                        </div>
+                    </div>
+
+                    
                 </div>
             </div>
 
         </div>
     </section>
+
+    <footer class="w-full py-5 bg-black">
+        <div class="max-w-screen-xl mx-auto flex flex-col gap-10 py-10 justify-center items-center">
+            <div class="flex justify-between w-full">
+                <div>
+                    <h1 class="text-4xl text-white font-bold">P-Ticket</h1>
+                    <p class="text-white">P-Ticket is a digital platform to make your daily commuting better.</p>
+                </div>
+
+                <div>
+                    <span class="text-white">Download our app</span>
+                    <img src="./images/Play.png" alt="" srcset="">
+                </div>
+                
+            </div>
+
+            <div class="w-full border-t-2  border-dashed my-4"></div>
+
+            <div class="flex justify-between w-full">
+                <span class="text-white">@all rights reserved, P-Ticket services limited.2024</span>
+
+                <ul class="text-white flex gap-4">
+                    <li>Terms & condition</li>
+                    <li>Return & refund policy</li>
+                    <li>Privacy policy</li>
+                </ul>
+            </div>
+
+
+        </div>
+    </footer>
+
 
 
     <script src="./script.js"></script>
