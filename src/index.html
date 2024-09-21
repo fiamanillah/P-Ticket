@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html class="scroll-smooth	">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +13,7 @@
 <body class="font-raleway">
 
 
-    <header class="w-full py-5">
+    <header class="w-full p-5">
         
         <div class="max-w-screen-xl mx-auto flex justify-between items-center ">
             <h1 class="text-3xl font-bold">P-Ticket</h1>
@@ -28,12 +28,13 @@
 
     </header>
 
-    <section class="w-full py-5">
-        <div class="max-w-screen-xl mx-auto flex flex-col justify-center items-center bg-cover bg-[url(./images/banner.png)] min-h-[600px] py-20 relative">
+    <section class="w-full p-5">
+        <div class="max-w-screen-xl mx-auto flex flex-col justify-center items-center bg-cover rounded-3xl bg-[url(./images/banner.png)] min-h-[600px] py-20 relative">
 
             <h1 class="text-7xl font-bold text-center text-white">End-to-End Travel with <br> <span class="text-primary">P Paribahan</span> </h1>
             <p class="text-white p-4 text-center">Yes, you can run unit tests and view the results directly within the app. <br> The integrated testing features allow for a streamlined .</p>
-            <button class="py-4 px-6 border-2 border-primary hover:bg-primary10 hover:text-primary bg-primary font-bold rounded-xl text-xl active:scale-[0.95] duration-300">Buy Ticket</button>
+            <a href="#ticketSection"><button class="py-4 px-6 border-2 border-primary hover:bg-primary10 hover:text-primary bg-primary font-bold rounded-xl text-xl active:scale-[0.95] duration-300">Buy Ticket</button></a>
+            
 
             <div class="flex justify-center gap-5 absolute bottom-[-10%] w-full ">
                 <div class="flex gap-3 rounded-3xl bg-white py-5 px-7 shadow-primary">
@@ -64,7 +65,7 @@
         </div>
     </section>
 
-    <section class="w-full py-5 mt-28">
+    <section class="w-full p-5 mt-28">
 
         <div class="max-w-screen-xl mx-auto flex flex-col justify-center items-center">
 
@@ -122,7 +123,7 @@
 
     </section>
 
-    <section class="w-full py-5 rounded-t-[100px] border-t-4 border-primary bg-[#f7f8f8]">
+    <section class="w-full p-5 rounded-t-[100px] border-t-4 border-primary bg-[#f7f8f8]" id="ticketSection">
         <div class="max-w-screen-xl mx-auto pt-10 flex flex-col justify-center items-center ">
 
             <div class="text-center flex flex-col justify-center items-center">
@@ -145,7 +146,7 @@
 
                         <button class="text-primary flex justify-center items-center border-2 border-primary bg-primary10 rounded-2xl py-3 px-4">
                             <img class="mr-2" src="./images/tabler-icon-armchair.svg" alt=""> 
-                            <span>40</span> Seats left
+                            <span id="seatLeftCount">40</span> Seats left
                         </button>
                     </div>
 
@@ -298,35 +299,42 @@
 
                     <div class="p-5 bg-[#f7f8f8] rounded-3xl">
                         <div class="flex justify-between ">
-                            <div class="font-medium flex items-start justify-center">Seat <span class="bg-primary inline-block text-sm px-2 rounded-lg ml-2 text-white ">2</span></div>
+                            <div class="font-medium flex items-start justify-center">Seat <span class="bg-primary inline-block text-sm px-2 rounded-lg ml-2 text-white" id="seatCount">0</span></div>
                             <div class="font-medium">Class</div>
                             <div class="font-medium">Price</div>
                         </div>
                         <div class="w-full border-t-2 border-dashed my-3"></div>
 
-                        <div class="">
-                            <div class="flex justify-between text-dullText text-center">
+                        <div class="" id="selectedSeatListing">
+
+                            <div class="w-full text-center" id="noSeatSelectedEl">
+                                <span class="text-xl text-red-500 font-medium ">No Seat Selected</span>
+                            </div>
+
+                            <!-- <div class="flex justify-between text-dullText text-center">
                                 <span>C2</span>
                                 <span>Economy</span>
                                 <span>550</span>
-                            </div>
+                            </div> -->
                         </div>
                         <hr class="h-2 w-full my-4">
                         <div class="flex justify-between ">
                             <div class="font-medium">Total Price</div>
-                            <div class="font-medium">BDT <span>1100</span></div>
+                            <div class="font-medium">BDT <span id="totalPrice"></span></div>
                         </div>
 
-                        <div class="my-3">
-                            <div class="bg-white flex p-2 rounded-2xl mt-5" >
-                                <input class="outline-none  font-medium grow mr-2 disabled:cursor-not-allowed bg-transparent" type="text" name="" id="" disabled placeholder="Have Any Coupon?">
-                                <button class="bg-primary text-white font-bold py-2 px-5 rounded-xl  disabled:opacity-40 disabled:cursor-not-allowed" disabled>Apply</button>
+                        <div class="my-3" id="couponDiv">
+                            <div class="bg-white flex p-2 rounded-2xl mt-5" id="couponField">
+                                <input class="outline-none  font-medium grow mr-2 disabled:cursor-not-allowed disabled:opacity-40 bg-transparent" type="text" name="" id="couponInput" disabled placeholder="Have Any Coupon?">
+                                <button class="bg-primary text-white font-bold py-2 px-5 rounded-xl  disabled:opacity-40 disabled:cursor-not-allowed"  id="couponBtn" disabled>Apply</button>
                             </div>
+                            <div class="w-full hidden justify-between my-5" id="new15CoupnApplied">Coupon NEW15 has been applied <button class="text-primary underline removeCouponBtn">Remove</button></div>
+                            <div class="w-full hidden justify-between my-5" id="couple20CoupnApplied">Coupon Couple 20 has been applied <button class="text-primary underline removeCouponBtn">Remove</button></div>
                         </div>
 
-                        <div class="flex justify-between mt-2">
+                        <div class="flex justify-between mt-2" >
                             <div class="font-medium">Grand Total</div>
-                            <div class="font-medium">BDT <span>1100</span></div>
+                            <div class="font-medium">BDT <span id="grandTotal"></span></div>
                         </div>
                         
                     </div>
@@ -334,15 +342,15 @@
                     <div class="my-8">
                         <form class="flex flex-col" action="" method="post">
                             <label class="font-medium my-3" for="">Passenger Name*</label>
-                            <input class="p-3 border rounded-xl outline-none" type="text" required placeholder="Enter your name">
+                            <input class="p-3 border rounded-xl outline-none" type="text" id="fullName" required placeholder="Enter your name">
 
-                            <label class="font-medium my-3" for="">Phone Number*</label>
-                            <input class="p-3 border rounded-xl outline-none" type="number" required placeholder="Enter your phone number">
+                            <label class="font-medium my-3" for="" >Phone Number*</label>
+                            <input class="p-3 border rounded-xl outline-none" type="number" id="phoneNumber" required placeholder="Enter your phone number">
 
                             <label class="font-medium my-3" for="">Email ID</label>
                             <input class="p-3 border rounded-xl outline-none" type="email" placeholder="Enter your email id">
 
-                            <input class="p-3 bg-primary font-bold text-white my-4 hover:bg-primary10 hover:text-black border-primary cursor-pointer active:scale-[0.95] duration-300 border rounded-xl outline-none" type="submit" value="Next">
+                            <input class="p-3 bg-primary font-bold text-white my-4 hover:bg-primary10 hover:text-black border-primary cursor-pointer active:scale-[0.95] duration-300 border rounded-xl outline-none disabled:opacity-30 disabled:hover:bg-primary disabled:hover:text-white disabled:cursor-not-allowed" disabled id="submitBtn" type="submit" value="Next">
                         </form>
 
                         <div class="flex justify-around mt-2">
@@ -358,7 +366,7 @@
         </div>
     </section>
 
-    <footer class="w-full py-5 bg-black">
+    <footer class="w-full p-5 bg-black">
         <div class="max-w-screen-xl mx-auto flex flex-col gap-10 py-10 justify-center items-center">
             <div class="flex justify-between w-full">
                 <div>
@@ -390,6 +398,16 @@
     </footer>
 
 
+    <div class="bg-primary10 fixed inset-0 hidden justify-center items-center" id="modal">
+        <div class="bg-white p-10 text-center flex flex-col gap-5 justify-center items-center rounded-2xl">
+            <img src="./images/done.svg" alt="">
+            <h1 class="text-xl font-bold text-primary">SUCCESS</h1>
+            <p class="font-medium">Thank you for Booking Our Bus Seats. <br>We are working hard to find the best service and deals for you.
+            </p>
+            <span>Shortly you will find a confirmation in your email.</span>
+            <button class="py-3 px-10 bg-primary font-bold text-white rounded-3xl" id="Continue">Continue</button>
+        </div>
+    </div>
 
     <script src="./script.js"></script>
 </body>
